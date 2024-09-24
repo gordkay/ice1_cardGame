@@ -42,48 +42,50 @@ public class CardTrick {
         System.out.println("Pick a suit (Hearts, Diamonds, Clubs, Spades): ");
         String userSuit = scanner.next();
         //create their card
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
-        // and search magicHand here
-        boolean found = false;
-        for (Card card : magicHand){
-        if (card.getValue() == userCard.getValue() && card.getSuit().equalsIgnoreCase(userCard.getSuit())){
-        found = true;
-        break;
-        }
-        }
-        //Then report the result here
-        if (found){
-        System.out.println("This is your card");
-        }
-        else
-        {
-                System.out.println("This is not your card");
-                }
-    }
+//        Card userCard = new Card();
+//        userCard.setValue(userValue);
+//        userCard.setSuit(userSuit);
+//        // and search magicHand here
+//        boolean found = false;
+//        for (Card card : magicHand){
+//        if (card.getValue() == userCard.getValue() && card.getSuit()
+//          .equals(userCard.getSuit())){
+//        found = true;
+//        break;
+//        }
+//        }
+//        //Then report the result here
+//        if (found){
+//        System.out.println("This is your card");
+//        }
+//        else
+//        {
+//                System.out.println("This is not your card");
+//                }
+//    }
 
     
-        // add one luckcard hard code 2,clubs
+//        // add one luckcard hard code 2,clubs
        Card luckyCard = new Card();
-    luckyCard.setValue(7);
-luckyCard.setSuit("Diamonds");
-
- // Search for the lucky card in the magicHand array
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Diamonds");
+//
+// // Search for the lucky card in the magicHand array
         boolean foundLucky = false;
         for (Card card : magicHand) {
-            if (card.getValue() == luckyCard.getValue() && card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit()
+                    .equals(luckyCard.getSuit())) {
                 foundLucky = true;
                 break;
             }
         }
-// Report if the lucky card was found
+//// Report if the lucky card was found
         if (foundLucky) {
-            System.out.println("Lucky card found! You win!");
+            System.out.println("You win!");
         } else {
-            System.out.println("Lucky card not found. You lose.");
+            System.out.println("You lose.");
         }
     }
     }
-    
+
 
