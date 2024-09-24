@@ -48,7 +48,8 @@ public class CardTrick {
         // and search magicHand here
         boolean found = false;
         for (Card card : magicHand){
-        if (card.getValue() == userCard.getValue() && card.getSuit().equalsIgnoreCase(userCard.getSuit())){
+        if (card.getValue() == userCard.getValue() && card.getSuit()
+            .equals(userCard.getSuit())){
         found = true;
         break;
         }
@@ -72,16 +73,17 @@ luckyCard.setSuit("Diamonds");
  // Search for the lucky card in the magicHand array
         boolean foundLucky = false;
         for (Card card : magicHand) {
-            if (card.getValue() == luckyCard.getValue() && card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit()
+                .equals(luckyCard.getSuit())) {
                 foundLucky = true;
                 break;
             }
         }
 // Report if the lucky card was found
         if (foundLucky) {
-            System.out.println("Lucky card found! You win!");
+            System.out.println("You win!");
         } else {
-            System.out.println("Lucky card not found. You lose.");
+            System.out.println("You lose.");
         }
     }
     }
